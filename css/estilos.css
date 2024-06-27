@@ -1,0 +1,21 @@
+.paragrafo {
+    background-color: red;
+    color: white;
+}
+
+#paragrafo-id{
+    background-color: blue;
+}
+.paragrafo-tres{
+    background-color: green;
+}
+.paragrafo-quatro{
+    background-color: yellow;
+}
+.paragrafo-cinco{
+    background-color: blanchedalmond;
+    color: blueviolet;
+    font-size: 50px;
+    padding-left: 50%;
+    border-radius: 40px;
+}
