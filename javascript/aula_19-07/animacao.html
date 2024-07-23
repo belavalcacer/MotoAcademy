@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação</title>
+</head>
+<body>
+    <style>
+        #box {
+            width: 500px;
+            height: 100px;
+            background-color: blueviolet;
+            position: relative;
+        }
+    </style>
+
+    <style>
+    #box2 {
+        width: 500px;
+        height: 100px;
+        background-color: pink;
+        position: relative;
+    }
+</style>
+
+    <div id = "box"></div>
+    <button id="animarBotao">Animar</button>
+
+    <div id = "box2"></div>
+    <button id="animarBotao2">Animar</button>
+
+
+    <script>
+        document.getElementById('animarBotao').addEventListener('click', ()=> {
+            const box = document.getElementById('box');
+            let position = 0
+
+            const interval = setInterval(frame, 20);
+
+            function frame () {
+                if (position == 650) {
+                    clearInterval(interval);
+            } else {
+                position++
+                box.style.top = position + 'px';
+                box.style.right = position + 'px';
+                }
+            }
+        })
+</script>
+        <script>
+
+        document.getElementById('animarBotao2').addEventListener('click', ()=> {
+            const box = document.getElementById('box2');
+            let position = 8
+
+            const interval = setInterval(frame, 20); 
+
+            function frame () {
+                if (position == 650) {
+                    clearInterval(interval);
+            } else {
+                position++
+                box.style.top = position + 'px';
+                box.style.left = position + 'px';
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>
