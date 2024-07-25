@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Consumindo API ViaCep</title>
+</head>
+<body>
+
+
+<div class="container">
+
+    <style>
+        .descricao{
+            margin-top: 20px;
+            font-size: 18px;
+            color:black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+        }
+    </style>
+
+    <div class="descricao">A API ViaCep</div>
+
+    <form>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputCep">Cep</label>
+      <input type="cep" class="form-control" id="cep" placeholder="CEP">
+    </div>
+    <button type="button" class="btn btn-info" onclick="consultaEndereco()">Consultar</button>
+
+  </form>
+
+  <script>
+    function consultaEndereco(){
+        let cep = document.querySelector("#cep").value;
+
+        if (cep.length !== 8) {
+            alert("CEP invalido");
+            return;
+        }
+
+        url = `https://viacep.com.br/ws/${cep}/json/`;
+
+        fetch(url).then(function(response) {
+            return response.json().then(function(data){
+                console.log(data);
+            })
+        });
+    }
+
+    function mostrarEndereco(dados) {
+        let endereco = document.querySelector("#endereco");
+
+        resultado.innerHTML = `<p>Endereço: ${dados.logradouro}</p>`
+    }
+  </script>
+
+</div>    
+
+</body>
+
+</html>
