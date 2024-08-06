@@ -20,16 +20,17 @@
     background-color: #f9f9f9; /* Cor de fundo clara */
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
     margin-top: 120px;
-    height: 300px;
-    padding-top: 40px;
-
+    height: 320px;
+    padding-top: 50px;
  }
+
 
  body, html {
     height: 100%;
     margin: 0;
     background-color: whitesmoke;
 }
+
 .banner {
     width: 100%;
     height: auto;
